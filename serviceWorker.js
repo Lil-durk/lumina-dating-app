@@ -1,9 +1,13 @@
-const staticDevCoffee = "cache-lumina";
+const cacheLumina = "cache-lumina";
 const assets = [
   "./",
   "./index.html",
+  "./homepage.html",
+  "./missions.html",
+  "./profile.html",
   "./css/style.css",
-  "./js/app.js",
+  "./js/homepage.js",
+  "./js/index.js",
   "./images/coffee1.jpg",
   "./images/coffee2.jpg",
   "./images/coffee3.jpg",
@@ -13,11 +17,17 @@ const assets = [
   "./images/coffee7.jpg",
   "./images/coffee8.jpg",
   "./images/coffee9.jpg",
+  "./images/coffee10.png",
+  "./images/camera.png",
+  "./images/heart.png",
+  "./images/homeIcon.png",
+  "./images/logo.png",
+
 ];
 
 self.addEventListener("install", (installEvent) => {
   installEvent.waitUntil(
-    caches.open(staticDevCoffee).then((cache) => {
+    caches.open(cacheLumina).then((cache) => {
       cache.addAll(assets);
     })
   );
